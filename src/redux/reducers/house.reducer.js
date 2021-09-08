@@ -18,6 +18,20 @@ const getAllHouses = (state = houseState.houses, {  type, payload }) =>
     }
 }
 
+const getSingleHouse = (state = houseState.house, { type, payload }) =>
+{
+    if(type === t.GET_SINGLE_HOUSE){
+        return {
+            ...state,
+            house: payload
+        }
+    } 
+    else {
+        return state
+    }
+}
+
 export default combineReducers({
-    houses: getAllHouses
+    houses: getAllHouses,
+    singleHouse: getSingleHouse,
 })

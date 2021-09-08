@@ -10,6 +10,15 @@ function getAllHouses () {
     }
 }
 
+function getSingleHouse (id) {
+    return async dispatch => {
+        const house = await houseServices.getSingleHouse(id)
+        dispatch({ type: t.GET_SINGLE_HOUSE, payload: house })
+        return house
+    }
+}
+
 export const houseActions = {
-    getAllHouses
+    getAllHouses,
+    getSingleHouse
 }
