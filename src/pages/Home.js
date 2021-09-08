@@ -1,11 +1,15 @@
 import React from "react";
+import Hero from "../components/Hero";
+import Banner from "../components/Banner";
 
 const Home = (props) =>
 {
     return(
-        <div>
-            As the day comes, as  go on, guide and watch over me oh lord.
-        </div>
+        <>
+           <Hero>
+            <Banner title="Homes in the suberbs of Chicago" subtitle="Brought to you by AutoChek-Housing"> </Banner>
+           </Hero>
+        </>
     )
 }
 
