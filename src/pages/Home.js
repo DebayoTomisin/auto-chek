@@ -8,7 +8,7 @@ import HouseList from "../components/HouseList";
 const Home = (props) =>
 {
     const dispatch = useDispatch()
-    const eventState = useSelector(state => state.houses.houses) || []
+    const houseState = useSelector(state => state.houses.houses) || []
 
     useEffect(() => {
         dispatch(houseActions.getAllHouses())
@@ -19,7 +19,7 @@ const Home = (props) =>
            <Hero>
             <Banner title="Homes in the suberbs of Chicago" subtitle="Brought to you by AutoChek-Housing"> </Banner>
            </Hero>
-           <HouseList houses={eventState} />
+           <HouseList houses={houseState} />
         </>
     )
 }

@@ -3,7 +3,7 @@ import { combineReducers } from "redux"
 
 const houseState = {
     houses: [],
-    house: []
+    house: {}
 }
 
 const getAllHouses = (state = houseState.houses, {  type, payload }) =>
