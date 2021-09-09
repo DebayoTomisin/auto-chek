@@ -4,8 +4,8 @@ import House from './House'
 const HouseList = (houses) => {
     const homes = houses.houses
     return (
-        <section className="roomslist">
-            <div className="roomslist-center">
+        <section className="houseslist">
+            <div className="houseslist-center">
                 {
                     homes.map(house => {
                         return(

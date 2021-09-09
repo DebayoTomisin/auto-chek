@@ -23,6 +23,11 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   line-height: 1.4;
 }
+a{
+  color: inherit;
+  text-decoration: none;
+  cursor:pointer;
+}
 h1 {
   font-size: 3em;
   line-height: 1;
@@ -105,14 +110,14 @@ h6 {
 }
 
 .defaultHero,
-.roomsHero {
+.housesHero {
   min-height: calc(100vh - 66px);
   background: url('./images/bcgHouse.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.roomsHero {
+.housesHero {
   min-height: 60vh;
   background-image: url('./images/bcgHouse2.jpg');
 }
@@ -157,12 +162,36 @@ h6 {
   }
 }
 
-/* room */
-.room {
+.houseslist {
+  padding: 5rem 0;
+}
+.houseslist-center {
+  width: 80vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  grid-row-gap: 2rem;
+  grid-column-gap: 30px;
+}
+
+@media screen and (min-width: 776px) {
+  .houseslist-center {
+    width: 90vw;
+  }
+}
+@media screen and (min-width: 992px) {
+  .houseslist-center {
+    width: 95vw;
+    max-width: 1170px;
+  }
+}
+
+/* house */
+.house {
   box-shadow: var(--lightShadow);
   transition: var(--mainTransition);
 }
-.room:hover {
+.house:hover {
   box-shadow: var(--darkShadow);
 }
 
@@ -192,7 +221,7 @@ h6 {
   font-weight: 300;
   letter-spacing: var(--mainSpacing);
 }
-.room-link {
+.house-link {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -208,10 +237,10 @@ h6 {
 .img-container:hover .price-top {
   opacity: 0;
 }
-.img-container:hover .room-link {
+.img-container:hover .house-link {
   transform: translate(-50%, -50%) scale(1);
 }
-.room-info {
+.house-info {
   background: var(--darkGrey);
   text-transform: capitalize;
   padding: 0.5rem 0;
@@ -219,13 +248,13 @@ h6 {
   font-weight: 700;
   letter-spacing: var(--mainSpacing);
 }
-/* end of room  */
-/* single room*/
+/* end of house  */
+/* single house*/
 
-.single-room {
+.single-house {
   padding: 5rem 0 0 0;
 }
-.single-room-images {
+.single-house-images {
   width: 80vw;
   margin: 0 auto;
   display: grid;
@@ -233,11 +262,11 @@ h6 {
   grid-row-gap: 2rem;
   grid-column-gap: 50px;
 }
-.single-room-images img {
+.single-house-images img {
   width: 100%;
   display: block;
 }
-.single-room-info {
+.single-house-info {
   width: 80vw;
   display: grid;
   grid-template-columns: 1fr;
@@ -263,11 +292,11 @@ h6 {
 .info h6 {
   font-weight: 300;
 }
-.room-extras {
+.house-extras {
   width: 80vw;
   margin: 0 auto 3rem auto;
 }
-.room-extras h6 {
+.house-extras h6 {
   text-transform: capitalize;
   letter-spacing: var(--mainSpacing);
 }
@@ -279,13 +308,13 @@ h6 {
   grid-row-gap: 1rem;
 }
 @media screen and (min-width: 992px) {
-  .single-room-images,
-  .single-room-info,
-  .room-extras {
+  .single-house-images,
+  .single-house-info,
+  .house-extras {
     width: 95vw;
     max-width: 1170px;
   }
-  .single-room-info {
+  .single-house-info {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 2rem;
@@ -295,26 +324,3 @@ h6 {
   }
 }
 
-.roomslist {
-  padding: 5rem 0;
-}
-.roomslist-center {
-  width: 80vw;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-  grid-row-gap: 2rem;
-  grid-column-gap: 30px;
-}
-
-@media screen and (min-width: 776px) {
-  .roomslist-center {
-    width: 90vw;
-  }
-}
-@media screen and (min-width: 992px) {
-  .roomslist-center {
-    width: 95vw;
-    max-width: 1170px;
-  }
-}
